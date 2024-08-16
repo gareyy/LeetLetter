@@ -87,4 +87,16 @@ label to_school:
     #TODO implement screen shaking?
     "She's a shark???????????"
 
+    "Pretty Shark" "Well hello there? May I ask for your name?"
+
+    player "its, uh, [player]..."
+
+    "Pretty Shark" "Well hello [player]! My name is Blahshah!"
+
+    "Blahshah?"
+
+    blahshah "Are you interested in coding perchance?"
+
+    player "You simply can't say perchance, but yeah, I have some idea of programming"
+
     return
