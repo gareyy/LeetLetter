@@ -8,3 +8,5 @@ game/cache/
 *.rpyc
 *.rpyb
 shaders.txt
+*.rpyc.bak
+*.rpymc

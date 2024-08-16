@@ -1,9 +1,4 @@
-﻿# The script of the game goes in this file.
-
-# Declare characters used by this game. The color argument colorizes the
-# name of the character.
-
-define player = Character("")
+﻿define player = Character("")
 
 define blahshah = Character("Blashah")
 
@@ -11,13 +6,15 @@ define sammy = Character("Sammy")
 
 define hopper = Character("Hopper")
 
-# The game starts here.
 
 label start: #testing type shit
     $ player.name = "Mr Testy"
+        
     jump to_school
 
 label introduction:
+
+    #scene bg black
 
     "It had been a week since my crush of 7 years got a partner"
 
@@ -98,5 +95,17 @@ label to_school:
     blahshah "Are you interested in coding perchance?"
 
     player "You simply can't say perchance, but yeah, I have some idea of programming"
+
+    blahshah "Great! Come to room ###-####! I can't wait to see you there!"
+
+    player "Wait! Blahshah! Any more details?"
+
+    blahshah "We are going to need your laptops!"
+
+    "She runs away. Aw nuts, did I scare another potential one off again?"
+
+    #scene bg black
+
+    "Time passes, the school day is over"
 
     return
