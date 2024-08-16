@@ -44,11 +44,10 @@ label to_school:
 
     player "You simply can't say perchance, but yeah, I have some idea of programming"
 
-    blahshah "Great! Come to room ###-####! I can't wait to see you there!"
+    #show blahshah blushing
+    blahshah "Great! Uh, come to room ###-####! I can't wait to see you there!"
 
     player "Wait! Blahshah! Any more details?"
-
-    blahshah "We are going to need your laptops!"
 
     #hide blahshah with dissolve
 
@@ -74,8 +73,8 @@ label to_school:
 
     "Oh no he's hot!"
 
-    sammy "Hey pretty! Blahshah told me you were promising to come along to our
-            struggling club!"
+    "Pretty Boy" "Hey pretty! My friend Blahshah told me you were 
+            promising to come along to our struggling club!"
 
     player "when did I say that?"
 
@@ -85,11 +84,13 @@ label to_school:
 
     "They didn't *smirk*"
 
-    sammy "Still, you made promises sweety"
+    "Pretty Boy" "Still, you made promises sweety"
 
     player "Okay then, I will follow!"
 
     "You know, this may not be so bad, with this pretty shark and this handsome boy
     around, this programming club may get me out of my heartbreak!"
+
+    #scene bg black with fade
 
     jump start_club

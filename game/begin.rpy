@@ -6,10 +6,9 @@ define sammy = Character("Sammy")
 
 define hopper = Character("Hopper")
 
-
 label start: #testing type shit
     $ player.name = "Mr Testy"
-        
+    
     jump to_school
 
 label introduction:
