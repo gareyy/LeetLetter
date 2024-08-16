@@ -11,3 +11,4 @@ shaders.txt
 *.rpyc.bak
 *.rpymc
 leetlettervenv/
+*.DS_Store
