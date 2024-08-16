@@ -1,0 +1,26 @@
+﻿I'm sorry, but an uncaught exception occurred.
+
+While running game code:
+  File "game/script.rpy", line 19, in script
+    init python:
+  File "game/script.rpy", line 20, in <module>
+    import unittest
+ModuleNotFoundError: No module named 'unittest'
+
+-- Full Traceback ------------------------------------------------------------
+
+Full traceback:
+  File "game/script.rpy", line 19, in script
+    init python:
+  File "/home/wumeno/Documents/Renpy/renpy/ast.py", line 823, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "/home/wumeno/Documents/Renpy/renpy/python.py", line 1178, in py_exec_bytecode
+    exec(bytecode, globals, locals)
+  File "game/script.rpy", line 20, in <module>
+    import unittest
+ModuleNotFoundError: No module named 'unittest'
+
+Linux-6.10.4-arch2-1-x86_64-with-glibc2.40 x86_64
+Ren'Py 8.2.3.24061702
+LeetLetter 1.0
+Fri Aug 16 19:05:34 2024

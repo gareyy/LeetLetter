@@ -1,0 +1,10 @@
+﻿I'm sorry, but errors were detected in your script. Please correct the
+errors listed below, and try again.
+
+
+File "game/script.rpy", line 20: invalid syntax
+    import python-unittest
+                  ^
+
+Ren'Py Version: Ren'Py 8.2.3.24061702
+Fri Aug 16 19:05:51 2024
