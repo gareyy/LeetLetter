@@ -3,31 +3,35 @@
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
 
-define e = Character("Eileen")
+define player = Character("")
 
+define blahshah = Character("Blashah")
 
 # The game starts here.
 
-label start:
+label introduction:
 
-    # Show a background. This uses a placeholder by default, but you can
-    # add a file (named either "bg room.png" or "bg room.jpg") to the
-    # images directory to show it.
+    player ""
+    jump naming
 
-    scene bg room
+label naming:
 
-    # This shows a character sprite. A placeholder is used, but you can
-    # replace it by adding a file named "eileen happy.png" to the images
-    # directory.
+    define input_name = ""
+    $ input_name = renpy.input("Well, what is my name?")
+    while input_name == "":
+        player "if I want to move on from this heartbreak, I will need to define myself"
+        $ input_name = renpy.input("(Please insert a name, this is mandatory)")
+        # if player does not give a name, repeat
+    
+    menu:
+        "Am I sure this is my identity?"
 
-    show eileen happy
+        "Yes":
+            $ player.name = input_name.strip()
+        
+        "No":
+            jump naming
 
-    # These display lines of dialogue.
-
-    e "You've created a new Ren'Py game."
-
-    e "Once you add a story, pictures, and music, you can release it to the world!"
-
-    # This ends the game.
+label to_school:
 
     return

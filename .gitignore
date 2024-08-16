@@ -1,2 +1,9 @@
 .vscode/
 game/.vscode/
+errors.txt
+log.txt
+game/saves/
+game/cache/
+.rpyc
+.rpyb
+shaders.txt
