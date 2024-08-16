@@ -10,9 +10,9 @@ label to_school:
 
     "However, some sort of treat awaited for me at the school gates"
 
-    #scene bg school front
+    #scene bg school front morning with fade
 
-    #show blahshah shadow
+    #show blahshah shadow with dissolve
 
     "Pretty Girl" "Come join the programming club! We still do not have enough members!"
 
@@ -50,10 +50,46 @@ label to_school:
 
     blahshah "We are going to need your laptops!"
 
+    #hide blahshah with dissolve
+
     "She runs away. Aw nuts, did I scare another potential one off again?"
 
-    #scene bg black
+    #scene bg black with fade
 
     "Time passes, the school day is over"
 
-    return
+    #scene bg school front afternoon
+
+    "As I prepare to head home, I see a familiar face prop right in front of me"
+
+    #show blahshah mad at right
+
+    blahshah "Hey! You promised to be at the programming club this afternoon"
+
+    player "Me?"
+
+    "????" "Yeah, you!"
+
+    #show sammy normal at easeinleft
+
+    "Oh no he's hot!"
+
+    sammy "Hey pretty! Blahshah told me you were promising to come along to our
+            struggling club!"
+
+    player "when did I say that?"
+
+    blahshah "I have video evidence baka"
+
+    player "Ok, ok, you probably got me there"
+
+    "They didn't *smirk*"
+
+    sammy "Still, you made promises sweety"
+
+    player "Okay then, I will follow!"
+
+    "You know, this may not be so bad, with this pretty shark and this handsome boy
+    around, this programming club may get me out of my heartbreak!"
+
+    jump start_club
