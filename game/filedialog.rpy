@@ -9,6 +9,8 @@ init python:
         for x in curr_path:
             if x.is_dir():
                 to_return.append(x.name + "/")
+            elif x.name.endswith(".py"):
+                to_return.append(x.name)
         return to_return
 
 
