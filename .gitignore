@@ -2,8 +2,9 @@
 game/.vscode/
 errors.txt
 log.txt
+traceback.txt
 game/saves/
 game/cache/
-.rpyc
-.rpyb
+*.rpyc
+*.rpyb
 shaders.txt

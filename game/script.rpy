@@ -7,11 +7,32 @@ define player = Character("")
 
 define blahshah = Character("Blashah")
 
+define sammy = Character("Sammy")
+
+define hopper = Character("Hopper")
+
 # The game starts here.
+
+label start: #testing type shit
+    $ player.name = "Mr Testy"
+    jump to_school
 
 label introduction:
 
-    player ""
+    "It had been a week since my crush of 7 years got a partner"
+
+    "They said they were the one, and they were right"
+
+    "I met them, they were a nice guy"
+
+    "Certainly better than me at being a partner to my crush"
+
+    "But life has to move on, and so should I"
+
+    "My life up until this point had been defined in keeping them company"
+
+    "I will now need to be a new person from here on out"
+
     jump naming
 
 label naming:
@@ -33,5 +54,37 @@ label naming:
             jump naming
 
 label to_school:
+
+    player "A journey of a thousand steps starts with one"
+
+    "I got ready for school for the first time in a week, 
+    ever since I saw my crush confess their love to them"
+
+    "The walk to school was a bit hard, I had done it a million times 
+    before, but emotionally, I was still not prepared"
+
+    "However, some sort of treat awaited for me at the school gates"
+
+    #scene bg school front
+
+    #show blahshah shadow
+
+    "Pretty Girl" "Come join the programming club! We still do not have enough members!"
+
+    "I approached her, pretending to be interested in programming"
+
+    "Well, I haven't done any coding since year 3, so I better win an oscar for
+    the acting im about to do"
+
+    player "Hey!"
+
+    "Pretty Girl" "Hello there!"
+
+    "I get a closer look at her face, and..."
+
+    #show blahshah normal
+
+    #TODO implement screen shaking?
+    "She's a shark???????????"
 
     return
