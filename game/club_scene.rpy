@@ -103,7 +103,7 @@ label start_club:
 
     "Hopper barges in Sammy's introduction"
 
-    show hopper neutral at easeinright
+    show hopper neutral at right with easeinright
 
     hopper "..."
 
@@ -137,5 +137,31 @@ label start_club:
     hopper "There there, poor little thing"
 
     "She goes on to start scratching my hair lightly. This feels good..."
+
+    "She takes her hand away"
+
+    show hopper neutral
+
+    hopper "..."
+
+    hide hopper with fade
+    show blahshah neutral at center with fade
+    show sammy neutral at left with fade
+    show hopper neutral at right with fade
+
+    blahshah "Okay then! I guess we can start today's club activities!"
+
+    blahshah "Let us begin with explaining our current projects!"
+
+    hide hopper with fade
+    hide sammy with fade
+
+    blahshah "My project is a bunch of coding tests!"
+
+    blahshah "Ever heard of fizzbuzz?"
+
+    player "Uh, no?"
+
+    blahshah "Well one of my tests is my own special version!"
 
     return

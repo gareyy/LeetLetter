@@ -62,7 +62,7 @@ label to_school:
 
     "As I prepare to head home, I see a familiar face prop right in front of me"
 
-    show blahshah at right 
+    show blahshah neutral at right 
     #mad 
 
     blahshah "Hey! You promised to be at the programming club this afternoon"
@@ -71,7 +71,7 @@ label to_school:
 
     "????" "Yeah, you!"
 
-    show sammy neutral at easeinleft
+    show sammy neutral at left with moveinleft
 
     "Oh no he's hot!"
 
