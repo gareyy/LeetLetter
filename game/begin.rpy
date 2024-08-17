@@ -10,7 +10,7 @@ label start: #testing type shit
     $ player.name = "Mr Testy"
     
     #jump start_club
-    jump to_school
+    jump blahshah_problem
 
 label introduction:
 

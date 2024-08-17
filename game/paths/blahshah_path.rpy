@@ -51,11 +51,28 @@ label blahshah_path:
 
     blahshah "Alright, I already have the tests, let me see you code."
 
+    jump blahshah_problem
+
+screen blahshah_screen():
+    frame:
+        xpadding 30
+        ypadding 30
+        xalign 0.5
+        yalign 0.5
+        text "get real" xalign 0.5 yalign 0.5
+
+
+label blahshah_problem:
+
     #PUT SCREEN UP FOR SHOWING TODO
     # PROBLEM
     # EXAMPLE CASES
     # INSTRUCTIONS (SHOULD BE IN A PYTHON FILE WITH METHOD BlayBlooBlah())
     # CONFIRMATION BUTTON WITH WAIT OF 30 SECONDS
+
+    call screen blahshah_screen()
+
+    jump blahshah_file_dialog
 
 label blahshah_file_dialog:
     $ file = renpy.input("Please paste in a full path (/home/user/file.py) to your python file")
@@ -73,8 +90,8 @@ label blahshah_file_dialog:
                         pack.testie() # HAHA I DID IT
                     except Exception as e:
                         blahshah("Uh, you are going to need to fix this")
-                        narrator(e)
-                        jump(blahshah_file_dialog)
+                        narrator(f"{e}")
+                        renpy.jump('blahshah_file_dialog')
                         
 
         "No":

@@ -1,5 +1,21 @@
-label start_club:
+screen who_to_help():
+    frame:
+        xpadding 30
+        ypadding 30
+        xalign 0.5
+        yalign 0.5
+        xysize (800, 500)
+        background Solid("000c") #may replace with something else
+        text "Who do I help?" xalign 0.5 yalign 0.1
+        hbox:
+            xalign 0.5
+            yalign 0.5
+            imagebutton idle "blahshah button" action Jump("blahshah_path")
+            imagebutton idle "sammy button" action Jump("sammy_path")
+            imagebutton idle "hopper button" action Jump("hopper_path")
 
+
+label start_club:
     "I follow Sammy and Blahshah into the mysterious room ###-####"
 
     scene bg classroom with fade
@@ -204,13 +220,4 @@ label start_club:
     blahshah "Maybe you could help one of us out?"
 
     #TODO: Fancier menu
-
-    menu:
-        "Who should I help?"
-
-        "Blahshah":
-            jump blahshah_path
-        "Sammy":
-            jump sammy_path
-        "Hopper":
-            jump hopper_path
+    call screen who_to_help()

@@ -1,2 +1,2 @@
-def testickle():
-    print("hello world!")
+def blayblooblah(i: int) -> str:
+    pass
