@@ -8,4 +8,4 @@ image blahshah neutral = At("blahshah/blahshah_neutral.png", ll_zoom)
 image sammy neutral = At("sammy/sammy_neutral.png", ll_zoom)
 
 #hopper
-image hopper neutral At("hopper/hopper_neutral.png", ll_zoom)
+image hopper neutral = At("hopper/hopper_neutral.png", ll_zoom)
