@@ -10,7 +10,7 @@ label start: #testing type shit
     $ player.name = "Mr Testy"
     
     #jump start_club
-    jump blahshah_file_dialog
+    jump to_school
 
 label introduction:
 

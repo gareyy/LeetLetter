@@ -22,6 +22,7 @@ image hopper button = At("hopper/hopper_neutral.png")
 
 #backgrounds
 image bg schoolfront = At("backgrounds/schoolfront.png", bg_zoom)
+image bg schoolfront afternoon = At("backgrounds/schoolfront_afternoon.png", bg_zoom)
 image bg classroom = At("backgrounds/classroom.png", bg_zoom)
-image bg confessiontree = At("backgrounds/confessiontree.png", bg_zoom)
+image bg confessiontree = At("backgrounds/confessiontree_afternoon.png", bg_zoom)
 image bg black = At("backgrounds/black.png", bg_zoom)

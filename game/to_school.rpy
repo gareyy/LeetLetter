@@ -59,7 +59,7 @@ label to_school:
 
     "Time passes, the school day is over."
 
-    scene bg schoolfront #afternoon
+    scene bg schoolfront afternoon
 
     "As I prepare to head home, I see a familiar face prop right in front of me."
 
