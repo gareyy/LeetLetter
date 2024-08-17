@@ -1,7 +1,25 @@
 init python:
-    def blahshah_test(script):
+    test_total = 0
+    successful_tests = 0
+    def blahshah_test(script) -> bool:
         #script is of module type
-        pass
+        tests = {6: "BlooBlah", 16: "BlayBlah", 5: "", 9: "BlayBloo", 2: "Blah",
+        36: "BlayBlooBlah", 28: "Blah", 30: "BlooBlah", 69: "Bloo", 1984: "Blah",
+        100: "BlayBlah", 144: "BlayBlooBlah", 0: "BlayBlooBlah"}
+        score = 0
+        for k, v in tests.items():
+            if script.blayblooblah(k) == v:
+                score += 1
+        
+        #I dont really like doing this sort of thing
+        try: #will crash if variables do not exist, but dont care
+            successful_tests = score
+            test_total = len(tests)
+        except Exception as e:
+            pass
+
+        return score >= (len(tests) * 0.8)
+        
 
 label blahshah_path:
 
@@ -16,11 +34,11 @@ label blahshah_path:
 
     blahshah "Let me explain it to you"
 
-    blahshah "Blay is when a number is a power of two"
+    blahshah "Blay is when a number is a power of two."
 
-    blahshah "Bloo is when a number is divisible by three"
+    blahshah "Bloo is when a number is divisible by three."
 
-    blahshah "Blah is when a number is an integer when multiplied by 1.5"
+    blahshah "Blah is when a number is an integer when multiplied by 1.5."
 
     blahshah "6 is a BlooBlah, 16 is a BlayBlah, 5 is none of them, 9 is a BlayBloo,
         2 is just a Blah, 36 is a BlayBlooBlah..."
@@ -42,7 +60,7 @@ label blahshah_path:
 
         "Blah":
             show blahshah blushing
-            blahshah "Thats correct actually"
+            blahshah "Thats correct actually."
 
         "BlooBlah":
             blahshah "Wrong stupid!"
@@ -51,11 +69,56 @@ label blahshah_path:
 
     blahshah "Alright, I already have the tests, let me see you code."
 
+    jump blahshah_problem
+
+define BlayBlooBlah_text = "BlayBlooBlah is like FizzBuzz. A number has 'Blay' when \
+it is a square of 2. A number has 'Bloo' when it is divisible by three. A number has \
+'Blah' when it is an integer when multiplied by 1.5. The tests will not give you \
+negative numbers."
+
+define BlayBlooBlah_examples = '''Examples:
+30 = BlooBlah
+69 = Bloo
+1984 = Blah
+100 = BlayBlah
+144 = BlayBlooBlah
+5 = ""
+'''
+
+define BlayBlooBlah_instructions = "You will provide a python script with \
+method 'BlayBlooBlah(i: int)', which will return a string. If a number does not \
+quality for BlayBlooBlah, return an empty string. This file will be given as a full \
+path to the incoming text input box. Code this python script in any code editor you \
+desire."
+
+screen blahshah_screen():
+    frame:
+        xpadding 100
+        ypadding 30
+        xalign 0.5
+        yalign 0.5
+        background Solid("000c") #may replace with something else
+        text "[BlayBlooBlah_text]" xalign 0.5 yalign 0.1
+        text "[BlayBlooBlah_examples]" xalign 0.5 yalign 0.325
+        text "[BlayBlooBlah_instructions]" xalign 0.5 yalign 0.6
+        text "BlayBlooBlah(i: int) -> str:" xalign 0.5 yalign 0.8
+        textbutton "I have coded a file with BlayBlooBlah(i)":
+            xalign 0.5 
+            yalign 0.9 
+            action Return()
+
+
+label blahshah_problem:
+
     #PUT SCREEN UP FOR SHOWING TODO
     # PROBLEM
     # EXAMPLE CASES
     # INSTRUCTIONS (SHOULD BE IN A PYTHON FILE WITH METHOD BlayBlooBlah())
-    # CONFIRMATION BUTTON WITH WAIT OF 30 SECONDS
+    # CONFIRMATION BUTTON
+
+    call screen blahshah_screen() with fade
+
+    jump blahshah_file_dialog
 
 label blahshah_file_dialog:
     $ file = renpy.input("Please paste in a full path (/home/user/file.py) to your python file")
@@ -63,21 +126,193 @@ label blahshah_file_dialog:
         "Are you sure you this is the desired file? [file]"
 
         "Yes":
-            if not file.endswith(".py"):
+            if not file.endswith(".py"): 
                 "File is not a python file"
+                jump blahshah_file_dialog
+            elif not os.path.exists(file):
+                "Provided path is not a valid path to a python file"
                 jump blahshah_file_dialog
             else:
                 python: 
                     pack = load_script(file)
                     try:
-                        pack.testie() # HAHA I DID IT
+                        result = blahshah_test(pack)
                     except Exception as e:
                         blahshah("Uh, you are going to need to fix this")
-                        narrator(e)
-                        jump(blahshah_file_dialog)
-                        
-
+                        narrator(f"{e}")
+                        renpy.jump('blahshah_file_dialog')
         "No":
             jump blahshah_file_dialog
+
+        "Instructions":
+            jump blahshah_problem
+
+    if result:
+        jump blahshah_good_ending
+    else:
+        jump blahshah_bad_ending
+
+label blahshah_good_ending:
+    show bg classroom
+    show blahshah neutral
+
+    blahshah "Oh! Successful test!"
+
+    blahshah "How experienced are you at this?"
+
+    player "Oh uh, not that much."
+
+    blahshah "Wow, so you are a natural at programming?"
+
+    player "Suprisingly, I guess so."
+
+    show blahshah blushing
+
+    player "Uh?"
+
+    blahshah "J-Join me later, by the tree at the lake."
+
+    player "That tree?"
+
+    blahshah "Y-yeah."
+
+    scene bg black with fade
+
+    "Time passes, the programming club meeting wraps up, and I follow Blahshah 
+    to the tree by the lake."
+
+    scene bg confessiontree
+
+    blahshah "Hey! Wait up [player]!"
+
+    show blahshah neutral
+
+    blahshah "*panting* Silly! Don't get ahead! You know I can't run for long."
+
+    player "I've only known you for a day, how am I supposed to know that?"
+
+    blahshah "I don't know, it just felt like I have known you for forever."
+
+    player "..."
+
+    blahshah "Yeah, i've been reading that code. Somehow, despite knowing nothing
+            about coding, you've managed to solve my problem."
+
+    player "..."
+
+    blahshah "Isn't that lovely to see? One can know a person through their programming."
+
+    player "What? That's a ridiculous claim."
+
+    blahshah "I think what makes a person beautiful is their intelligence."
+
+    blahshah "How the human mind can solve complicated problems."
+
+    player "..."
+
+    player "I have to confess to you something Blahshah."
+
+    show blahshah blushing
+
+    blahshah "Huh?"
+
+    player "..."
+
+    player "Well, I've kind of lied about my own programming skill."
+
+    player "I haven't really coded since I was in grade 3."
+
+    blahshah "Oh."
+
+    player "It's kind of funny right?"
+
+    #show blahshah sad
+
+    blahshah "Oh.."
+
+    blahshah "I thought you were going to confess to me."
+
+    player "..!"
+
+    show blahshah mad
+
+    blahshah "You idiot!"
+
+    player "What?"
+
+    show blahshah neutral
+
+    blahshah "Sorry for that..."
+
+    blahshah "I have a problem with expressing love."
+
+    blahshah "Or rather my inability to express love properly."
+
+    blahshah "Kind of a left over instinct I have from a past breakup."
+
+    blahshah "I don't think I have recovered from that."
+
+    blahshah "Ever since then, I hide my feelings too much."
+
+    "I go out to hug her."
+
+    show blahshah blushing
+
+    blahshah "Uh?"
+
+    player "I understand."
+
+    player "I only got heartbroken last week."
+
+    blahshah "Wow, actually?"
+
+    "I let go from her."
+
+    show blahshah neutral
+
+    player "Over those seven years of loving and waiting for this one person, I was not
+            able to confess to them due to fear of rejection."
+
+    player "One day, they texted me that they confessed to their now partner."
+
+    player "It was the worst feeling I have had in my life."
+
+    blahshah "You're not alone on that kind of feeling."
+
+    blahshah "I just mainly wait for people to confess to me, even if it will never happen."
+
+    blahshah "Ironic how the only thing you can't read about a person is if they love you, right?"
+
+    scene bg black with fade
+
+    "Ending: Good ending with Blahshah"
+
+    return
+
+label blahshah_bad_ending:
+    show bg classroom
+    show blahshah neutral
+
+    blahshah "Ok! Lets get this code running!"
+
+    "Computer" "Ran [test_total] tests, [successful_tests] are successful"
+
+    blahshah "Uh, was that supposed to work?"
+
+    player "I don't know..."
+
+    blahshah "Let me open the code..."
+
+    blahshah "Um..."
+
+    player "What?"
+
+    blahshah "Seems like a stupid person made this."
+
+    player "Youch..."
+
+    player "Well honestly, I haven't really done any programming since the 3rd grade."
+
+    blahshah "Oh really? "
 
     return
