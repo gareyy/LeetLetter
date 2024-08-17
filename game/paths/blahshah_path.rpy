@@ -1,8 +1,11 @@
 init python:
     def blahshah_test(script) -> bool:
         #script is of module type
-        pass
-
+        tests = {6: "BlooBlah", 16: "BlayBlah", 5: "", 9: "BlayBloo", 2: "Blah",
+        36: "BlayBlooBlah", 28: "Blah", 30: "BlooBlah", 69: "Bloo", 1984: "Blah",
+        100: "BlayBlah", 144: "BlayBlooBlah", 0: "BlayBlooBlah"}
+        score = 0
+        
 
 label blahshah_path:
 
@@ -56,14 +59,15 @@ label blahshah_path:
 
 define BlayBlooBlah_text = "BlayBlooBlah is like FizzBuzz. A number has 'Blay' when \
 it is a square of 2. A number has 'Bloo' when it is divisible by three. A number has \
-'Blah' when it is an integer when multiplied by 1.5"
+'Blah' when it is an integer when multiplied by 1.5. The tests will not give you \
+negative numbers."
 
 define BlayBlooBlah_examples = '''Examples:
 30 = BlooBlah
 69 = Bloo
 1984 = Blah
 100 = BlayBlah
-144 = BlayBloo Blah
+144 = BlayBlooBlah
 5 = ""
 '''
 
@@ -81,7 +85,7 @@ screen blahshah_screen():
         yalign 0.5
         background Solid("000c") #may replace with something else
         text "[BlayBlooBlah_text]" xalign 0.5 yalign 0.1
-        text "[BlayBlooBlah_examples]" xalign 0.5 yalign 0.3
+        text "[BlayBlooBlah_examples]" xalign 0.5 yalign 0.325
         text "[BlayBlooBlah_instructions]" xalign 0.5 yalign 0.6
         text "BlayBlooBlah(i: int) -> str:" xalign 0.5 yalign 0.8
         textbutton "I have coded a file with BlayBlooBlah(i)":
@@ -118,7 +122,7 @@ label blahshah_file_dialog:
                 python: 
                     pack = load_script(file)
                     try:
-                        pack.testie() # HAHA I DID IT
+                        result = blahshah_test(pack)
                     except Exception as e:
                         blahshah("Uh, you are going to need to fix this")
                         narrator(f"{e}")
