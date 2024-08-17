@@ -35,6 +35,6 @@ label start_club:
 
     #show blahshah blushing
 
-    blahshah "Wow, uh"
+    blahshah "Wow, uh..."
 
     return
