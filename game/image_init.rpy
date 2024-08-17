@@ -12,6 +12,7 @@ image blahshah blushing = At("blahshah/blahshah_blushing.png", ll_zoom)
 
 #sammy
 image sammy neutral = At("sammy/sammy_neutral.png", ll_zoom)
+image sammy blushing = At("sammy/sammy_blushing.png", ll_zoom)
 
 #hopper
 image hopper neutral = At("hopper/hopper_neutral.png", ll_zoom)
