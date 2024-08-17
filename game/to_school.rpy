@@ -13,7 +13,7 @@ label to_school:
     scene bg schoolfront with fade 
     #add morning
 
-    show blahshah neutral with dissolve
+    show blahshah shadow with dissolve
 
     "Pretty Girl" "Come join the programming club! We still do not have enough members!"
 
@@ -28,7 +28,7 @@ label to_school:
 
     "I get a closer look at her face, and..."
 
-    #show blahshah shadow
+    show blahshah neutral with fade
 
     #TODO implement screen shaking?
     "She's a shark???????????"
