@@ -24,11 +24,11 @@ label blahshah_path:
 
     blahshah "Let me explain it to you"
 
-    blahshah "Blay is when a number is a power of two"
+    blahshah "Blay is when a number is a power of two."
 
-    blahshah "Bloo is when a number is divisible by three"
+    blahshah "Bloo is when a number is divisible by three."
 
-    blahshah "Blah is when a number is an integer when multiplied by 1.5"
+    blahshah "Blah is when a number is an integer when multiplied by 1.5."
 
     blahshah "6 is a BlooBlah, 16 is a BlayBlah, 5 is none of them, 9 is a BlayBloo,
         2 is just a Blah, 36 is a BlayBlooBlah..."
@@ -50,7 +50,7 @@ label blahshah_path:
 
         "Blah":
             show blahshah blushing
-            blahshah "Thats correct actually"
+            blahshah "Thats correct actually."
 
         "BlooBlah":
             blahshah "Wrong stupid!"
@@ -150,17 +150,17 @@ label blahshah_good_ending:
 
     blahshah "How experienced are you at this?"
 
-    player "Oh uh, not that much"
+    player "Oh uh, not that much."
 
     blahshah "Wow, so you are a natural at programming?"
 
-    player "Suprisingly, I guess so"
+    player "Suprisingly, I guess so."
 
     show blahshah blushing
 
     player "Uh?"
 
-    blahshah "J-Join me later, by the tree at the lake"
+    blahshah "J-Join me later, by the tree at the lake."
 
     player "That tree?"
 
@@ -169,7 +169,7 @@ label blahshah_good_ending:
     scene bg black with fade
 
     "Time passes, the programming club meeting wraps up, and I follow Blahshah 
-    to the tree by the lake"
+    to the tree by the lake."
 
     scene bg confessiontree
 
@@ -177,9 +177,74 @@ label blahshah_good_ending:
 
     show blahshah neutral
 
-    blahshah "*panting* Silly! Don't get ahead! You know I can't run for long"
+    blahshah "*panting* Silly! Don't get ahead! You know I can't run for long."
 
     player "I've only known you for a day, how am I supposed to know that?"
+
+    blahshah "I don't know, it just felt like I have known you for forever."
+
+    player "..."
+
+    blahshah "Yeah, i've been reading that code. Somehow, despite knowing nothing
+            about coding, you've managed to solve my problem."
+
+    player "..."
+
+    blahshah "Isn't that lovely to see? One can know a person through their programming."
+
+    player "What? That's a ridiculous claim."
+
+    blahshah "I think what makes a person beautiful is their intelligence."
+
+    blahshah "How the human mind can solve complicated problems."
+
+    player "..."
+
+    player "I have to confess to you something Blahshah."
+
+    show blahshah blushing
+
+    blahshah "Huh?"
+
+    player "..."
+
+    player "Well, I've kind of lied about my own programming skill."
+
+    player "I haven't really coded since I was in grade 3."
+
+    blahshah "Oh."
+
+    player "It's kind of funny right?"
+
+    #show blahshah sad
+
+    blahshah "Oh.."
+
+    blahshah "I thought you were going to confess to me."
+
+    player "..!"
+
+    show blahshah mad
+
+    blahshah "You idiot!"
+
+    player "What?"
+
+    show blahshah neutral
+
+    blahshah "Sorry for that..."
+
+    blahshah "I have a problem with expressing love."
+
+    blahshah "Or rather my inability to express love properly."
+
+    blahshah "Kind of a left over instinct I have from a past breakup."
+
+    blahshah "I don't think I have recovered from that."
+
+    blahshah "Ever since then, I hide my feelings too much."
+
+    blahshah "Maybe until I met you today."
 
     return
 

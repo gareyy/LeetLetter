@@ -16,19 +16,19 @@ screen who_to_help():
 
 
 label start_club:
-    "I follow Sammy and Blahshah into the mysterious room ###-####"
+    "I follow Sammy and Blahshah into the mysterious room ###-####."
 
     scene bg classroom with fade
 
     show hopper neutral
 
-    "Goth Girl" "Uh, hello"
+    "Goth Girl" "Uh, hello."
 
     show sammy neutral at right
 
     sammy "[player], this is our gracious little Hopper!"
 
-    hopper "Shut up" 
+    hopper "Shut up." 
 
     sammy "Anyway, now we have one more person, we can get our club off the ground!"
 
@@ -67,7 +67,7 @@ label start_club:
 
     "She tackles me to the ground"
 
-    "Uh oh, she's perched on top of me"
+    "Uh oh, she's perched on top of me."
 
     show blahshah blushing
 
@@ -75,9 +75,9 @@ label start_club:
 
     blahshah "...."
 
-    player "Lets get up"
+    player "Lets get up."
 
-    "I push her off me and stand up, she also stands up"
+    "I push her off me and stand up, she also stands up."
 
     show blahshah neutral
 
@@ -94,31 +94,31 @@ label start_club:
 
     sammy "Well hello, beautiful little [player]"
 
-    "He comes up close to me and pinches my chin"
+    "He comes up close to me and pinches my chin."
 
     #show sammy blushing
 
-    sammy "Wow, you look prettier up close"
+    sammy "Wow, you look prettier up close."
 
-    "Oh crap, my heart is beating too fast. I wish my old crush did this to me"
+    "Oh crap, my heart is beating too fast. I wish my old crush did this to me."
 
     "Hey! [player]! Think about other stuff! Now is not the time to dwell on past regrets!"
 
-    sammy "Heh"
+    sammy "Heh."
 
-    "He lets go of my chin and steps back"
+    "He lets go of my chin and steps back."
 
     sammy "Are you committed to a relationship handsome?"
 
     player "No?"
 
-    "Hopper barges in Sammy's introduction"
+    "Hopper barges in Sammy's introduction."
 
     show hopper neutral at right with easeinright
 
     hopper "..."
 
-    sammy "Uh, I'll leave them to you, I guess"
+    sammy "Uh, I'll leave them to you, I guess."
 
     hide sammy
     show hopper neutral
@@ -127,7 +127,7 @@ label start_club:
 
     player "Uh?"
 
-    hopper "I see it in your eyes"
+    hopper "I see it in your eyes."
 
     player "What?"
 
@@ -141,15 +141,15 @@ label start_club:
 
     hopper "Ha."
 
-    "She pats my head"
+    "She pats my head."
 
     show hopper blushing
 
-    hopper "There there, poor little thing"
+    hopper "There there, poor little thing."
 
     "She goes on to start scratching my hair lightly. This feels good..."
 
-    "She takes her hand away"
+    "She takes her hand away."
 
     show hopper neutral
 
@@ -175,9 +175,9 @@ label start_club:
 
     blahshah "Well one of my tests is my own special version! BlayBlooBlah!"
 
-    blahshah "Blay if a number is a power of two"
+    blahshah "Blay if a number is a power of two."
 
-    blahshah "Bloo if a number is divisible by 3"
+    blahshah "Bloo if a number is divisible by 3."
 
     blahshah "Blah if a number is an integer when multiplied by 1.5!"
 
@@ -186,28 +186,28 @@ label start_club:
     hide blahshah with fade
     show sammy neutral with fade
 
-    sammy "My project is a poker game, but a little more complicated"
+    sammy "My project is a poker game, but a little more complicated."
 
     sammy "In fact its so complicated that I don't even know how to add in the poker
-            hand detection system"
+            hand detection system."
 
     sammy "It's got everything from high cards to royal flushes, which complicates
-            everything more"
+            everything more."
 
     sammy "Maybe you could help me?"
 
     hide sammy with fade
     show hopper neutral with fade
 
-    hopper "Spirals"
+    hopper "Spirals."
 
-    hopper "Im making a spiral generator and I need help"
+    hopper "Im making a spiral generator and I need help."
 
-    hopper "The user inputs a spiral diameter and it generates a spiral"
+    hopper "The user inputs a spiral diameter and it generates a spiral."
 
-    hopper "The spiral's dots are numbered"
+    hopper "The spiral's dots are numbered."
 
-    hopper "Don't ask what it is for"
+    hopper "Don't ask what it is for."
 
     show hopper neutral at right
     show blahshah neutral
@@ -215,7 +215,7 @@ label start_club:
 
     blahshah "So, [player], what is your project?"
 
-    player "Um, I don't know, I only just got here"
+    player "Um, I don't know, I only just got here."
 
     blahshah "Maybe you could help one of us out?"
 

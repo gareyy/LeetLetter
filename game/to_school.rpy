@@ -17,10 +17,10 @@ label to_school:
 
     "Pretty Girl" "Come join the programming club! We still do not have enough members!"
 
-    "I approached her, pretending to be interested in programming"
+    "I approached her, pretending to be interested in programming."
 
     "Well, I haven't done any coding since year 3, so I better win an oscar for
-    the acting im about to do"
+    the acting im about to do."
 
     player "Hey!"
 
@@ -43,7 +43,7 @@ label to_school:
 
     blahshah "Are you interested in coding perchance?"
 
-    player "You simply can't say perchance, but yeah, I have some idea of programming"
+    player "You simply can't say perchance, but yeah, I have some idea of programming."
 
     show blahshah blushing
 
@@ -57,15 +57,15 @@ label to_school:
 
     scene bg black with fade
 
-    "Time passes, the school day is over"
+    "Time passes, the school day is over."
 
     scene bg schoolfront #afternoon
 
-    "As I prepare to head home, I see a familiar face prop right in front of me"
+    "As I prepare to head home, I see a familiar face prop right in front of me."
 
     show blahshah mad at right 
 
-    blahshah "Hey! You promised to be at the programming club this afternoon"
+    blahshah "Hey! You promised to be at the programming club this afternoon."
 
     player "Me?"
 
@@ -80,13 +80,13 @@ label to_school:
 
     player "when did I say that?"
 
-    blahshah "I have video evidence baka"
+    blahshah "I have video evidence baka."
 
-    player "Ok, ok, you probably got me there"
+    player "Ok, ok, you probably got me there."
 
     "They didn't *smirk*"
 
-    "Pretty Boy" "Still, you made promises sweety"
+    "Pretty Boy" "Still, you made promises sweety."
 
     player "Okay then, I will follow!"
 

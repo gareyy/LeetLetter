@@ -1,7 +1,17 @@
 init python:
     def sammy_test(script) -> bool:
-        tests = {
+        '''Suits are 
+        H C S D
 
+        Ranks are
+
+        A 2 3 4 5 6 7 8 9 10 J Q K
+
+        A hand is built like
+        ['HA', 'HK', 'HQ', "HJ", "H10"] = "Royal Flush"
+        '''
+        tests = {
+            ('HA', 'HK', 'HQ', "HJ", "H10"): "Royal Flush"
         }
 
 label sammy_path:

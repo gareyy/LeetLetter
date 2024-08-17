@@ -1,2 +1,2 @@
-def poker_hand(hand: list[str]) -> str:
+def poker_hand(hand: tuple[str]) -> str:
     pass
