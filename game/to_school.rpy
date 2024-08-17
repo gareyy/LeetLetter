@@ -10,7 +10,8 @@ label to_school:
 
     "However, some sort of treat awaited for me at the school gates"
 
-    #scene bg school front morning with fade
+    scene bg schoolfront with fade 
+    #add morning
 
     show blahshah neutral with dissolve
 
@@ -53,15 +54,16 @@ label to_school:
 
     "She runs away. Aw nuts, did I scare another potential one off again?"
 
-    #scene bg black with fade
+    scene bg black with fade
 
     "Time passes, the school day is over"
 
-    #scene bg school front afternoon
+    scene bg schoolfront #afternoon
 
     "As I prepare to head home, I see a familiar face prop right in front of me"
 
-    #show blahshah mad at right
+    show blahshah at right 
+    #mad 
 
     blahshah "Hey! You promised to be at the programming club this afternoon"
 
@@ -69,7 +71,7 @@ label to_school:
 
     "????" "Yeah, you!"
 
-    #show sammy normal at easeinleft
+    show sammy neutral at easeinleft
 
     "Oh no he's hot!"
 
@@ -91,6 +93,6 @@ label to_school:
     "You know, this may not be so bad, with this pretty shark and this handsome boy
     around, this programming club may get me out of my heartbreak!"
 
-    #scene bg black with fade
+    scene bg black with fade
 
     jump start_club

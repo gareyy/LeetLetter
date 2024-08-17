@@ -2,7 +2,7 @@ label start_club:
 
     "I follow Sammy and Blahshah into the mysterious room ###-####"
 
-    #scene bg classroom with fade
+    scene bg classroom with fade
 
     show hopper neutral
 
@@ -20,13 +20,17 @@ label start_club:
 
     blahshah "Yeah!"
 
-    #show blahshah excited
+    #show blahshah #excited
 
     blahshah "Proper introductions are in order!"
 
     #show hopper concerned
 
     hopper "Oh no"
+
+    hide hopper
+    hide sammy
+    show blahshah neutral at center
 
     blahshah "My name is Blahshah! 
                 I am the leader of the Toruvalds High School Programming Club!"
@@ -35,6 +39,8 @@ label start_club:
 
     #show blahshah blushing
 
-    blahshah "Wow, uh"
+    blahshah "Wow, uh, i'm from Atlantis?"
+
+    player "Dude, thats what they all say"
 
     return
