@@ -5,6 +5,10 @@ init python:
         36: "BlayBlooBlah", 28: "Blah", 30: "BlooBlah", 69: "Bloo", 1984: "Blah",
         100: "BlayBlah", 144: "BlayBlooBlah", 0: "BlayBlooBlah"}
         score = 0
+        for k, v in tests.items():
+            if script.blayblooblah(k) == v:
+                score += 1
+        return score >= (len(tests) / 2)
         
 
 label blahshah_path:
@@ -130,10 +134,20 @@ label blahshah_file_dialog:
         "No":
             jump blahshah_file_dialog
 
-    return
+        "Instructions":
+            jump blahshah_problem
+
+    if result:
+        jump blahshah_good_ending
+    else:
+        jump blahshah_bad_ending
 
 label blahshah_good_ending:
-    pass
+    "Good ending"
+    
+    return
 
 label blahshah_bad_ending:
-    pass
+    "Bad Ending"
+
+    return
