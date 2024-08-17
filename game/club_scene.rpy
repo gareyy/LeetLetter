@@ -124,4 +124,18 @@ label start_club:
 
     "Huh? How does she know?"
 
+    hopper "It's over for you, right? A love of seven years?"
+
+    player "Uh, yeah? More like a crush..."
+
+    hopper "Ha."
+
+    "She pats my head"
+
+    #show hopper blushing
+
+    hopper "There there, poor little thing"
+
+    "She goes on to start scratching my hair lightly. This feels good..."
+
     return
