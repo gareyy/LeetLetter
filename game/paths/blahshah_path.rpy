@@ -303,4 +303,16 @@ label blahshah_bad_ending:
 
     blahshah "Let me open the code..."
 
+    blahshah "Um..."
+
+    player "What?"
+
+    blahshah "Seems like a stupid person made this."
+
+    player "Youch..."
+
+    player "Well honestly, I haven't really done any programming since the 3rd grade."
+
+    blahshah "Oh really? "
+
     return
