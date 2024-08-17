@@ -9,7 +9,7 @@ define hopper = Character("Hopper")
 label start: #testing type shit
     $ player.name = "Mr Testy"
     
-    jump to_school
+    jump start_club
     #jump to_school
 
 label introduction:

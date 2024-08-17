@@ -12,7 +12,7 @@ label to_school:
 
     #scene bg school front morning with fade
 
-    #show blahshah shadow with dissolve
+    show blahshah neutral with dissolve
 
     "Pretty Girl" "Come join the programming club! We still do not have enough members!"
 
@@ -27,7 +27,7 @@ label to_school:
 
     "I get a closer look at her face, and..."
 
-    #show blahshah normal
+    #show blahshah shadow
 
     #TODO implement screen shaking?
     "She's a shark???????????"
@@ -49,7 +49,7 @@ label to_school:
 
     player "Wait! Blahshah! Any more details?"
 
-    #hide blahshah with dissolve
+    hide blahshah with dissolve
 
     "She runs away. Aw nuts, did I scare another potential one off again?"
 
