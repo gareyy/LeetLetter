@@ -6,6 +6,7 @@ transform bg_zoom:
 
 #blahshah
 image blahshah neutral = At("blahshah/blahshah_neutral.png", ll_zoom)
+image blahshah shadow = At("blahshah/blahshah_shadow.png", ll_zoom)
 
 #sammy
 image sammy neutral = At("sammy/sammy_neutral.png", ll_zoom)
