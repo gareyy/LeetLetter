@@ -1,7 +1,8 @@
 init python:
-    def blahshah_test(script):
+    def blahshah_test(script) -> bool:
         #script is of module type
         pass
+
 
 label blahshah_path:
 
@@ -53,13 +54,40 @@ label blahshah_path:
 
     jump blahshah_problem
 
+define BlayBlooBlah_text = "BlayBlooBlah is like FizzBuzz. A number has 'Blay' when \
+it is a square of 2. A number has 'Bloo' when it is divisible by three. A number has \
+'Blah' when it is an integer when multiplied by 1.5"
+
+define BlayBlooBlah_examples = '''Examples:
+30 = BlooBlah
+69 = Bloo
+1984 = Blah
+100 = BlayBlah
+144 = BlayBloo Blah
+5 = ""
+'''
+
+define BlayBlooBlah_instructions = "You will provide a python script with \
+method 'BlayBlooBlah(i: int)', which will return a string. If a number does not \
+quality for BlayBlooBlah, return an empty string. This file will be given as a full \
+path to the incoming text input box. Code this python script in any code editor you \
+desire."
+
 screen blahshah_screen():
     frame:
-        xpadding 30
+        xpadding 100
         ypadding 30
         xalign 0.5
         yalign 0.5
-        text "get real" xalign 0.5 yalign 0.5
+        background Solid("000c") #may replace with something else
+        text "[BlayBlooBlah_text]" xalign 0.5 yalign 0.1
+        text "[BlayBlooBlah_examples]" xalign 0.5 yalign 0.3
+        text "[BlayBlooBlah_instructions]" xalign 0.5 yalign 0.6
+        text "BlayBlooBlah(i: int) -> str:" xalign 0.5 yalign 0.8
+        textbutton "I have coded a file with BlayBlooBlah(i)":
+            xalign 0.5 
+            yalign 0.9 
+            action Return()
 
 
 label blahshah_problem:
@@ -68,9 +96,9 @@ label blahshah_problem:
     # PROBLEM
     # EXAMPLE CASES
     # INSTRUCTIONS (SHOULD BE IN A PYTHON FILE WITH METHOD BlayBlooBlah())
-    # CONFIRMATION BUTTON WITH WAIT OF 30 SECONDS
+    # CONFIRMATION BUTTON
 
-    call screen blahshah_screen()
+    call screen blahshah_screen() with fade
 
     jump blahshah_file_dialog
 
@@ -80,8 +108,11 @@ label blahshah_file_dialog:
         "Are you sure you this is the desired file? [file]"
 
         "Yes":
-            if not file.endswith(".py"):
+            if not file.endswith(".py"): 
                 "File is not a python file"
+                jump blahshah_file_dialog
+            elif not os.path.exists(file):
+                "Provided path is not a valid path to a python file"
                 jump blahshah_file_dialog
             else:
                 python: 
@@ -92,9 +123,13 @@ label blahshah_file_dialog:
                         blahshah("Uh, you are going to need to fix this")
                         narrator(f"{e}")
                         renpy.jump('blahshah_file_dialog')
-                        
-
         "No":
             jump blahshah_file_dialog
 
     return
+
+label blahshah_good_ending:
+    pass
+
+label blahshah_bad_ending:
+    pass
