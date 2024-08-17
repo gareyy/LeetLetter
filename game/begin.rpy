@@ -14,7 +14,7 @@ label start: #testing type shit
 
 label introduction:
 
-    #scene bg black
+    scene bg black
 
     "It had been a week since my crush of 7 years got a partner"
 
