@@ -226,7 +226,7 @@ label blahshah_good_ending:
 
     player "It's kind of funny right?"
 
-    #show blahshah sad
+    show blahshah sad
 
     blahshah "Oh.."
 

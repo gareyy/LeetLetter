@@ -8,16 +8,14 @@ transform bg_zoom:
 image blahshah neutral = At("blahshah/blahshah_neutral.png", ll_zoom)
 image blahshah shadow = At("blahshah/blahshah_shadow.png", ll_zoom)
 image blahshah mad = At("blahshah/blahshah_mad.png", ll_zoom)
+image blahshah sad = At("blahshah/blahshah_sad.png", ll_zoom)
 image blahshah blushing = At("blahshah/blahshah_blushing.png", ll_zoom)
 image blahshah button = At("blahshah/blahshah_neutral.png")
 
 #sammy
 image sammy neutral = At("sammy/sammy_neutral.png", ll_zoom)
-<<<<<<< HEAD
 image sammy blushing = At("sammy/sammy_blushing.png", ll_zoom)
-=======
 image sammy button = At("sammy/sammy_neutral.png")
->>>>>>> d5774018f47bf50b31fbfbc8ac49db2dc09a77c3
 
 #hopper
 image hopper neutral = At("hopper/hopper_neutral.png", ll_zoom)
