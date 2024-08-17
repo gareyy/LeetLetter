@@ -1,4 +1,6 @@
 init python:
+    test_total = 0
+    successful_tests = 0
     def blahshah_test(script) -> bool:
         #script is of module type
         tests = {6: "BlooBlah", 16: "BlayBlah", 5: "", 9: "BlayBloo", 2: "Blah",
@@ -8,7 +10,15 @@ init python:
         for k, v in tests.items():
             if script.blayblooblah(k) == v:
                 score += 1
-        return score >= (len(tests) / 2)
+        
+        #I dont really like doing this sort of thing
+        try: #will crash if variables do not exist, but dont care
+            successful_tests = score
+            test_total = len(tests)
+        except Exception as e:
+            pass
+
+        return score >= (len(tests) * 0.8)
         
 
 label blahshah_path:
@@ -244,12 +254,53 @@ label blahshah_good_ending:
 
     blahshah "Ever since then, I hide my feelings too much."
 
-    blahshah "Maybe until I met you today."
+    "I go out to hug her."
+
+    show blahshah blushing
+
+    blahshah "Uh?"
+
+    player "I understand."
+
+    player "I only got heartbroken last week."
+
+    blahshah "Wow, actually?"
+
+    "I let go from her."
+
+    show blahshah neutral
+
+    player "Over those seven years of loving and waiting for this one person, I was not
+            able to confess to them due to fear of rejection."
+
+    player "One day, they texted me that they confessed to their now partner."
+
+    player "It was the worst feeling I have had in my life."
+
+    blahshah "You're not alone on that kind of feeling."
+
+    blahshah "I just mainly wait for people to confess to me, even if it will never happen."
+
+    blahshah "Ironic how the only thing you can't read about a person is if they love you, right?"
+
+    scene bg black with fade
+
+    "Ending: Good ending with Blahshah"
 
     return
 
 label blahshah_bad_ending:
     show bg classroom
     show blahshah neutral
+
+    blahshah "Ok! Lets get this code running!"
+
+    "Computer" "Ran [test_total] tests, [successful_tests] are successful"
+
+    blahshah "Uh, was that supposed to work?"
+
+    player "I don't know..."
+
+    blahshah "Let me open the code..."
 
     return
