@@ -1,10 +1,13 @@
 init python:
+    import os
+    from pathlib import Path
     UP_ARROW = "⬆️"
     DOWN_ARROW = "⬇️"
     command = ""
 
     class fileLoader:
         def open_dir(self, path: str) -> list[str]:
+            print(path)
             curr_path = os.scandir(path)
             to_return = []
             for x in curr_path:
@@ -15,14 +18,15 @@ init python:
             return to_return
 
         def __init__(self) -> None:
-            import os
-            from pathlib import Path
             self.path_name = Path.home()
             self.path_list = [self.path_name]
             self.viewpoint = 0
         
         def get_curr_list(self) -> str:
             return self.open_dir(self.path_list[-1])
+        
+        def get_curr_path(self) -> str:
+            return self.path_list[-1]
 
         def restrict_view(self, items: list[str]) -> list[str]:
             to_return = [items[i:i + 5] for i in range(0, len(items), 5)]
@@ -43,6 +47,9 @@ init python:
             else:
                 return ["../"]
 
+        def get_full_path(self, file: str) -> str:
+            return str(self.get_curr_path()) + "/" + file
+
         def process_view(self, command: str) -> list[str]:
             if command == UP_ARROW:
                 self.viewpoint -= 1
@@ -50,13 +57,12 @@ init python:
                 self.viewpoint += 1
             elif command == "../":
                 if len(self.path_list) > 1: self.path_list.pop()
-            elif command.endswith("/"):
-                self.path_list.append(self.open_dir(self.get_full_path(command)))
+            elif command.endswith("/") and \
+            self.path_list[-1] != self.get_full_path(command):
+                    self.path_list.append(self.get_full_path(command))
             return self.restrict_view(self.get_curr_list())
 
-        def get_full_path(self, file: str) -> str:
-            return str(self.get_curr_list()) + "/" + file
-    
+
     file_loader = fileLoader()
 
 
