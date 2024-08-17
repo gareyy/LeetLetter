@@ -59,6 +59,7 @@ The lone and level sands stretch far away.”
 
 
 label file_loading:
+    #this is example code to be loaded into the path rpy files
     $ file = renpy.input("Please paste in a full path (/home/user/file.py) to your python file")
     menu:
         "Are you sure you this is the desired file? [file]"
