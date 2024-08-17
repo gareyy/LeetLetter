@@ -11,21 +11,45 @@ init python:
             20 07 08 09 10
             19 06 02 02 11
             18 05 04 03 12
-            17 16 15 14 13
-            '''
+            17 16 15 14 13''',
+            
+            1: '''01''',
+
+            2: '''01 02
+            04 03'''
         }
+        score = 0
+        for k, v in tests.items():
+            if script.spiral(k) == v:
+                score += 1
+        
+        return score >= (len(tests) * 0.8)
 
 label hopper_path:
 
-    "This path is not implemented yet!"
+    scene bg classroom
+    show hopper neutral
 
-    call screen who_to_help()
+    jump hopper_file_dialog
 
     return
 
-define spiral_text = ""
-define spiral_examples = ""
-define spiral_instructions = ""
+define spiral_text = "Your code will generate a spiral, with double digit numbers as \
+the dots. This spiral will be clockwise from the inner most dot. The input will be \
+an integer which will be the diameter. The output will be a multiline string, so use \
+triple quotation mark strings."
+define spiral_examples = '''Examples:
+diam = 3    diam = 5
+
+07 08 09    21 22 23 24 25
+06 01 02    20 07 08 09 10
+05 04 03    19 06 01 02 11
+                18 05 04 03 12
+                17 16 15 14 13'''
+define spiral_instructions = "You will provide a python script with method \
+spiral(diam: int), where the output is a multiline string. The tests will only \
+have inputs in range 1 to 9. This file will be inputted as a full path to the incoming text box. \
+Code this python script in any editor you desire."
 
 screen hopper_screen():
     frame:
@@ -35,9 +59,9 @@ screen hopper_screen():
         yalign 0.5
         background Solid("000c") #may replace with something else
         text "[spiral_text]" xalign 0.5 yalign 0.1
-        text "[spiral_examples]" xalign 0.5 yalign 0.325
-        text "[spiral_instructions]" xalign 0.5 yalign 0.6
-        text "TODO CHANGE" xalign 0.5 yalign 0.8
+        text "[spiral_examples]" xalign 0.5 yalign 0.4
+        text "[spiral_instructions]" xalign 0.5 yalign 0.7
+        text "spiral(diam: int) -> str" xalign 0.5 yalign 0.8
         textbutton "I have coded a file with spiral(diam)":
             xalign 0.5 
             yalign 0.9 
@@ -67,6 +91,7 @@ label hopper_file_dialog:
                     try:
                         result = hopper_test(pack)
                     except Exception as e:
+                        #show hopper concerned
                         hopper("Oh, something is bad")
                         narrator(f"{e}")
                         renpy.jump('hopper_file_dialog')

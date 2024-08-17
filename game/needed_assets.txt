@@ -1,11 +1,11 @@
-schoolfront morning
-blahshah blushing
-schoolfront afternoon
-blahshah mad
+x schoolfront morning
+x blahshah blushing
+x schoolfront afternoon
+x blahshah mad
 blahshah excited
 hopper concerned
-sammy blushing
-hopper blushing
+x sammy blushing
+x hopper blushing
 
 blahshah sad
-schoolfront morning and afternoon
+x schoolfront morning and afternoon

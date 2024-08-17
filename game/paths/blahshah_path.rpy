@@ -290,7 +290,7 @@ label blahshah_good_ending:
     return
 
 label blahshah_bad_ending:
-    show bg classroom
+    scene bg classroom
     show blahshah neutral
 
     blahshah "Ok! Lets get this code running!"
@@ -313,6 +313,14 @@ label blahshah_bad_ending:
 
     player "Well honestly, I haven't really done any programming since the 3rd grade."
 
-    blahshah "Oh really? "
+    blahshah "Oh really? That sucks."
+
+    blahshah "Well come again next week, I can get the others to help you learn."
+
+    player "Um, yeah..."
+
+    scene bg black with fade
+
+    "Ending: Bad ending with Blahshah"
 
     return
