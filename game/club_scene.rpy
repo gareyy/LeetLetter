@@ -219,5 +219,4 @@ label start_club:
 
     blahshah "Maybe you could help one of us out?"
 
-    #TODO: Fancier menu
     call screen who_to_help()
