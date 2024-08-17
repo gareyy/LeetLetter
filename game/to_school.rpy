@@ -45,7 +45,8 @@ label to_school:
 
     player "You simply can't say perchance, but yeah, I have some idea of programming"
 
-    #show blahshah blushing
+    show blahshah blushing
+
     blahshah "Great! Uh, come to room ###-####! I can't wait to see you there!"
 
     player "Wait! Blahshah! Any more details?"
@@ -62,8 +63,7 @@ label to_school:
 
     "As I prepare to head home, I see a familiar face prop right in front of me"
 
-    show blahshah neutral at right 
-    #mad 
+    show blahshah mad at right 
 
     blahshah "Hey! You promised to be at the programming club this afternoon"
 

@@ -20,11 +20,7 @@ label start_club:
 
     blahshah "Yeah!"
 
-    #show blahshah #excited
-
     blahshah "Proper introductions are in order!"
-
-    #show hopper concerned
 
     hopper "Oh no"
 
@@ -37,7 +33,7 @@ label start_club:
 
     player "Can you explain the whole shark thing?"
 
-    #show blahshah blushing
+    show blahshah blushing
 
     blahshah "No! I am a classic anime girl through and through baka!"
 
@@ -45,8 +41,7 @@ label start_club:
 
     player "Woah! Easy there Blahshah!"
 
-    show blahshah neutral
-    # mad
+    show blahshah mad
 
     blahshah "Grrr!"
 
@@ -58,7 +53,7 @@ label start_club:
 
     "Uh oh, she's perched on top of me"
 
-    #show blahshah blushing
+    show blahshah blushing
 
     blahshah "..."
 
@@ -132,7 +127,7 @@ label start_club:
 
     "She pats my head"
 
-    #show hopper blushing
+    show hopper blushing
 
     hopper "There there, poor little thing"
 
