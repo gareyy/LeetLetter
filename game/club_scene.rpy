@@ -162,6 +162,60 @@ label start_club:
 
     player "Uh, no?"
 
-    blahshah "Well one of my tests is my own special version!"
+    blahshah "Well one of my tests is my own special version! BlayBlooBlah!"
 
-    return
+    blahshah "Blay if a number is a power of two"
+
+    blahshah "Bloo if a number is divisible by 3"
+
+    blahshah "Blah if a number is an integer when multiplied by 1.5!"
+
+    blahshah "And I need someone to code for it so I can see if my tests are good!"
+
+    hide blahshah with fade
+    show sammy neutral with fade
+
+    sammy "My project is a poker game, but a little more complicated"
+
+    sammy "In fact its so complicated that I don't even know how to add in the poker
+            hand detection system"
+
+    sammy "It's got everything from high cards to royal flushes, which complicates
+            everything more"
+
+    sammy "Maybe you could help me?"
+
+    hide sammy with fade
+    show hopper neutral with fade
+
+    hopper "Spirals"
+
+    hopper "Im making a spiral generator and I need help"
+
+    hopper "The user inputs a spiral diameter and it generates a spiral"
+
+    hopper "The spiral's dots are numbered"
+
+    hopper "Don't ask what it is for"
+
+    show hopper neutral at right
+    show blahshah neutral
+    show sammy neutral at left
+
+    blahshah "So, [player], what is your project?"
+
+    player "Um, I don't know, I only just got here"
+
+    blahshah "Maybe you could help one of us out?"
+
+    #TODO: Fancier menu
+
+    menu:
+        "Who should I help?"
+
+        "Blahshah":
+            jump blahshah_path
+        "Sammy":
+            jump sammy_path
+        "Hopper":
+            jump hopper_path
