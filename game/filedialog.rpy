@@ -18,34 +18,44 @@ init python:
             import os
             from pathlib import Path
             self.path_name = Path.home()
-            self.upper_path = self.path_name
-            self.curr_list = self.open_dir(self.path_name)
+            self.path_list = [self.path_name]
             self.viewpoint = 0
         
-        def get_curr_list(self):
-            return self.curr_list
+        def get_curr_list(self) -> str:
+            return self.open_dir(self.path_list[-1])
 
         def restrict_view(self, items: list[str]) -> list[str]:
             to_return = [items[i:i + 5] for i in range(0, len(items), 5)]
+
             if self.viewpoint < 0:
                 self.viewpoint = 0
             elif self.viewpoint >= len(to_return):
                 self.viewpoint = len(to_return) - 1
-
-            focus = to_return[self.viewpoint]
-            if self.viewpoint != 0:
-                focus.insert(0, UP_ARROW)
-            if self.viewpoint != len(to_return)-1:
-                focus.append(DOWN_ARROW)
-
-            return focus
+            
+            if len(to_return) != 0:
+                focus = to_return[self.viewpoint]
+                focus.insert(0, "../")
+                if self.viewpoint != 0:
+                    focus.insert(0, UP_ARROW)
+                if self.viewpoint != len(to_return)-1:
+                    focus.append(DOWN_ARROW)
+                return focus
+            else:
+                return ["../"]
 
         def process_view(self, command: str) -> list[str]:
             if command == UP_ARROW:
                 self.viewpoint -= 1
             elif command == DOWN_ARROW:
                 self.viewpoint += 1
+            elif command == "../":
+                if len(self.path_list) > 1: self.path_list.pop()
+            elif command.endswith("/"):
+                self.path_list.append(self.open_dir(self.get_full_path(command)))
             return self.restrict_view(self.get_curr_list())
+
+        def get_full_path(self, file: str) -> str:
+            return str(self.get_curr_list()) + "/" + file
     
     file_loader = fileLoader()
 
@@ -59,7 +69,7 @@ screen choose_menu(lister):
 label file_loading:
     call screen choose_menu(file_loader.process_view(command))
     $ command = opened
-    if command in [UP_ARROW, DOWN_ARROW]:
+    if not command.endswith(".py"):
         jump file_loading
     else:
-        "[command]"
+        "[file_loader.get_full_path(command)]"
