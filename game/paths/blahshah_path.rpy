@@ -74,7 +74,7 @@ label blahshah_file_dialog:
                     except Exception as e:
                         blahshah("Uh, you are going to need to fix this")
                         narrator(e)
-                        jump blahshah_file_dialog
+                        jump(blahshah_file_dialog)
                         
 
         "No":
