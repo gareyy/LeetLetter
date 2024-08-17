@@ -96,7 +96,7 @@ label start_club:
 
     "He comes up close to me and pinches my chin."
 
-    #show sammy blushing
+    show sammy blushing
 
     sammy "Wow, you look prettier up close."
 

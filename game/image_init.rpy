@@ -13,7 +13,11 @@ image blahshah button = At("blahshah/blahshah_neutral.png")
 
 #sammy
 image sammy neutral = At("sammy/sammy_neutral.png", ll_zoom)
+<<<<<<< HEAD
+image sammy blushing = At("sammy/sammy_blushing.png", ll_zoom)
+=======
 image sammy button = At("sammy/sammy_neutral.png")
+>>>>>>> d5774018f47bf50b31fbfbc8ac49db2dc09a77c3
 
 #hopper
 image hopper neutral = At("hopper/hopper_neutral.png", ll_zoom)
