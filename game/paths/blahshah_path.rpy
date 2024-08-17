@@ -143,11 +143,48 @@ label blahshah_file_dialog:
         jump blahshah_bad_ending
 
 label blahshah_good_ending:
-    "Good ending"
-    
+    show bg classroom
+    show blahshah neutral
+
+    blahshah "Oh! Successful test!"
+
+    blahshah "How experienced are you at this?"
+
+    player "Oh uh, not that much"
+
+    blahshah "Wow, so you are a natural at programming?"
+
+    player "Suprisingly, I guess so"
+
+    show blahshah blushing
+
+    player "Uh?"
+
+    blahshah "J-Join me later, by the tree at the lake"
+
+    player "That tree?"
+
+    blahshah "Y-yeah."
+
+    scene bg black with fade
+
+    "Time passes, the programming club meeting wraps up, and I follow Blahshah 
+    to the tree by the lake"
+
+    scene bg confessiontree
+
+    blahshah "Hey! Wait up [player]!"
+
+    show blahshah neutral
+
+    blahshah "*panting* Silly! Don't get ahead! You know I can't run for long"
+
+    player "I've only known you for a day, how am I supposed to know that?"
+
     return
 
 label blahshah_bad_ending:
-    "Bad Ending"
+    show bg classroom
+    show blahshah neutral
 
     return
