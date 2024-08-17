@@ -12,3 +12,5 @@ shaders.txt
 *.rpymc
 leetlettervenv/
 *.DS_Store
+game/paths/__pycache__/
+*.pyc
