@@ -152,6 +152,8 @@ define config.save_directory = "LeetLetter-1723798293"
 
 define config.window_icon = "gui/window_icon.png"
 
+define config.nearest_neighbor = True
+
 
 ## Build configuration #########################################################
 ##
