@@ -10,7 +10,6 @@ image blahshah shadow = At("blahshah/blahshah_shadow.png", ll_zoom)
 image blahshah mad = At("blahshah/blahshah_mad.png", ll_zoom)
 image blahshah sad = At("blahshah/blahshah_sad.png", ll_zoom)
 image blahshah blushing = At("blahshah/blahshah_blushing.png", ll_zoom)
-image blahshah button = At("blahshah/blahshah_neutral.png")
 image blahshah excited = At("blahshah/blahshah_excited.png", ll_zoom)
 
 #sammy

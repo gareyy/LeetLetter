@@ -5,17 +5,18 @@ screen who_to_help():
         xalign 0.5
         yalign 0.5
         xysize (800, 500)
-        background Solid("000c") #may replace with something else
+        background "/gui/char_selection_box.png" #may replace with something else
         text "Who do I help?" xalign 0.5 yalign 0.1
         hbox:
             xalign 0.5
             yalign 0.5
-            imagebutton idle "blahshah button" action Jump("blahshah_path")
-            imagebutton idle "sammy button" action Jump("sammy_path")
-            imagebutton idle "hopper button" action Jump("hopper_path")
+            imagebutton auto "/sammy/sammy_%s.png" action Jump("sammy_path")
+            imagebutton auto "/blahshah/blahshah_%s.png" action Jump("blahshah_path")
+            imagebutton auto "/hopper/hopper_%s.png" action Jump("hopper_path")
 
 
 label start_club:
+
     "I follow Sammy and Blahshah into the mysterious room ###-####."
 
     scene bg classroom with fade
