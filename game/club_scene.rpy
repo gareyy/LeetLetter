@@ -121,7 +121,7 @@ label start_club:
     sammy "Uh, I'll leave them to you, I guess."
 
     hide sammy
-    show hopper neutral
+    show hopper neutral at center
 
     hopper "..."
 
