@@ -1,5 +1,10 @@
 # LeetLetter, a coding challenge in dating sim form
 **The only UQCS Hackathon2024 project to not use ChatGPT and AI!\***
+<p align="center">
+<img src="game/images/logo.png" width="200" height="150">
+</p>
+
+
 
 ![Threezer](screenshots/screenshot0002.png)
 
