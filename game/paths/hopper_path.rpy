@@ -46,6 +46,7 @@ label hopper_path:
         "Continue Hopper Path":
             jump hopper_problem
 
+    jump hopper_problem
     return
 
 define spiral_text = "Your code will generate a spiral, with double digit numbers as \
