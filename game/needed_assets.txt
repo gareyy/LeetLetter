@@ -2,10 +2,10 @@ x schoolfront morning
 x blahshah blushing
 x schoolfront afternoon
 x blahshah mad
-blahshah excited
-hopper concerned
+x blahshah excited
+x hopper concerned
 x sammy blushing
 x hopper blushing
 
-blahshah sad
+x blahshah sad
 x schoolfront morning and afternoon

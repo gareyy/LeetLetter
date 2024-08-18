@@ -38,6 +38,8 @@ label start_club:
 
     blahshah "Proper introductions are in order!"
 
+    show hopper concerned
+
     hopper "Oh no"
 
     hide hopper
