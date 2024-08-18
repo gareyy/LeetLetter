@@ -70,9 +70,26 @@ screen sammy_screen():
 
 label sammy_problem:
 
-    call screen sammy_screen() with fade
+    scene bg black
 
-    jump sammy_file_dialog
+    "DEMO" "Unfortunately, the narrative parts of this romance path have not been implemented yet"
+
+    "DEMO" "The problem code for this path has been implemented."
+
+    "DEMO" "You may choose to continue with exploring this romance path, or go to the Blahshah path \
+    which is the only fully implemented path."
+
+    menu:
+        "Where to go?"
+
+        "Go to Blahshah path":
+            jump blahshah_path
+        
+        "Continue Sammy Path":
+            scene bg classroom
+            show sammy neutral
+            call screen sammy_screen() with fade
+            jump sammy_file_dialog
 
 label sammy_file_dialog:
     $ file = renpy.input("Please paste in a full path (/home/user/file.py) to your python file")
@@ -108,10 +125,14 @@ label sammy_file_dialog:
 
 label sammy_good_ending:
 
+    scene bg black
+    hide sammy
     "Ending: Good ending with Sammy"
     return
 
 label sammy_bad_ending:
 
+    scene bg black
+    hide sammy
     "Ending: Bad ending with Sammy"
     return
