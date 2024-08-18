@@ -6,6 +6,8 @@
 With a newly broken heart, your curiosity gets the better of you when you join 
 your high school's programming club.
 
+Available to download at https://wumeno.itch.io/leetletter 
+
 # Characters
 
 **Take on the programming problems of one of the programming club's three members!**
