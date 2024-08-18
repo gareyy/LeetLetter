@@ -22,6 +22,7 @@ image sammy button = At("sammy/sammy_neutral.png")
 image hopper neutral = At("hopper/hopper_neutral.png", ll_zoom)
 image hopper blushing = At("hopper/hopper_blushing.png", ll_zoom)
 image hopper button = At("hopper/hopper_neutral.png")
+image hopper concerned = At("hopper/hopper_concerned.png", ll_zoom)
 
 #backgrounds
 image bg schoolfront = At("backgrounds/schoolfront.png", bg_zoom)
