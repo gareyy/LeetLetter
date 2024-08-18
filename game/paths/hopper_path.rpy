@@ -38,12 +38,12 @@ label hopper_path:
     which is the only fully implemented path."
 
     menu:
-        "Where to go?"
+        "Which path to go to??"
 
-        "Go to Blahshah path":
+        "Blahshah":
             jump blahshah_path
         
-        "Continue Hopper Path":
+        "Hopper":
             jump hopper_problem
 
     jump hopper_problem

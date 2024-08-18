@@ -41,12 +41,12 @@ label sammy_path:
     which is the only fully implemented path."
 
     menu:
-        "Where to go?"
+        "Which path to go on?"
 
-        "Go to Blahshah path":
+        "Blahshah":
             jump blahshah_path
         
-        "Continue Sammy Path":
+        "Sammy":
             jump sammy_problem
 
     jump sammy_problem
