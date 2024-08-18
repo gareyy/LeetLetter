@@ -33,6 +33,22 @@ label sammy_path:
     scene bg classroom
     show sammy neutral
 
+    "DEMO" "Unfortunately, the narrative parts of this romance path have not been implemented yet"
+
+    "DEMO" "The problem code for this path has been implemented."
+
+    "DEMO" "You may choose to continue with exploring this romance path, or go to the Blahshah path \
+    which is the only fully implemented path."
+
+    menu:
+        "Where to go?"
+
+        "Go to Blahshah path":
+            jump blahshah_path
+        
+        "Continue Sammy Path":
+            jump sammy_problem
+
     jump sammy_problem
 
 
@@ -69,27 +85,8 @@ screen sammy_screen():
             action Return()
 
 label sammy_problem:
-
-    scene bg black
-
-    "DEMO" "Unfortunately, the narrative parts of this romance path have not been implemented yet"
-
-    "DEMO" "The problem code for this path has been implemented."
-
-    "DEMO" "You may choose to continue with exploring this romance path, or go to the Blahshah path \
-    which is the only fully implemented path."
-
-    menu:
-        "Where to go?"
-
-        "Go to Blahshah path":
-            jump blahshah_path
-        
-        "Continue Sammy Path":
-            scene bg classroom
-            show sammy neutral
-            call screen sammy_screen() with fade
-            jump sammy_file_dialog
+    call screen sammy_screen() with fade
+    jump sammy_file_dialog
 
 label sammy_file_dialog:
     $ file = renpy.input("Please paste in a full path (/home/user/file.py) to your python file")

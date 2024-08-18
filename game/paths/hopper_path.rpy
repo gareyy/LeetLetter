@@ -27,7 +27,8 @@ init python:
 
 label hopper_path:
 
-    scene bg black
+    scene bg classroom
+    show hopper neutral
 
     "DEMO" "Unfortunately, the narrative parts of this romance path have not been implemented yet"
 
@@ -42,11 +43,8 @@ label hopper_path:
         "Go to Blahshah path":
             jump blahshah_path
         
-        "Continue Sammy Path":
-            scene bg classroom
-            show hopper neutral
-            call screen hopper_screen() with fade
-            jump hopper_file_dialog
+        "Continue Hopper Path":
+            jump hopper_problem
 
     return
 
