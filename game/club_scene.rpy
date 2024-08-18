@@ -32,11 +32,13 @@ label start_club:
 
     sammy "Anyway, now we have one more person, we can get our club off the ground!"
 
-    show blahshah neutral at left
+    show blahshah excited at left
 
     blahshah "Yeah!"
 
     blahshah "Proper introductions are in order!"
+
+    show hopper concerned
 
     hopper "Oh no"
 
